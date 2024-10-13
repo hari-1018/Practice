@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Word Length</title>
+</head>
+<body>
+    <script>
+        // Given a strings, return the largest word length.
+        // Example:
+        // "The quick brown fox jumps over the lazy dog" = 5
+
+        function findShortestWordLength(str) {
+        const words = str.split(' ');
+        // console.log(words);
+
+        const out = words.sort((a, b) => a.length - b.length);
+        // console.log(out);
+        return words[words.length-1].length;
+}
+    // const str = "The quick brown fox jumps over the lazy dog";
+    const str = "JavaScript is a programming language";
+    console.log(findShortestWordLength(str)); 
+    
+
+    
+
+    </script>
+</body>
+</html>

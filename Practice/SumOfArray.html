@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of an Array</title>
+</head>
+<body>
+    <script>
+        // Given an array of numbers, return the sum of all the numbers in the array.
+        // Example:
+        // ([1, 2, 3, 4, 5]) => 15
+        // ([2, -1, 4, 8, 10]) => 25
+
+        function sumOfArray(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += Math.abs(arr[i]);
+            }
+            return sum;
+        }
+        console.log(sumOfArray([1, 2, 3, 4, 5]));   
+        console.log(sumOfArray([2, -1, 4, 8, 10])); 
+        
+    </script>
+</body>
+</html>

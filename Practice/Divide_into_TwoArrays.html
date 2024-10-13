@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Arrays-Capital & Small</title>
+</head>
+<body>
+    <script>
+// Given a string with both capital and small letters, return two arrays where the first array only contains capital letters and another one with small letters.(Score - 3)
+// Example:
+// Scrambled(“bridGEON”)➞[[“brid”],[”GEON”]]
+// Scrambled(“MICROsoft”)➞[[“soft”],[”MICRO”]]
+
+// function Scrambled(str) {
+//     let capitalArray = [];
+//     let smallArray = [];
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === str[i].toUpperCase()) {
+//             capitalArray.push(str[i]);
+//         } else {
+//             smallArray.push(str[i]);
+//         }
+//     }
+//     return [smallArray, capitalArray];
+// }
+// console.log(Scrambled("bridGEON")); 
+
+// function Scrambled(str) {
+//   let lowerCaseStr = str.split('').filter(char => char === char.toLowerCase()).join('');
+//   let upperCaseStr = str.split('').filter(char => char === char.toUpperCase()).join('');
+//   return [[lowerCaseStr], [upperCaseStr]];
+// }
+// console.log(Scrambled("bridGEON"));
+// console.log(Scrambled("MICROsoft"));
+
+function Scrambled(str) {
+ let lower = '';
+ let upper = '';
+ for(let i = 0; i < str.length; i++) {
+    if(str[i] === str[i].toLowerCase()) {
+      lower += str[i];
+    } else {
+      upper += str[i];
+    }
+}
+return [[lower, upper]];
+}
+console.log(Scrambled("bridGEON"));
+
+    </script>
+</body>
+</html>

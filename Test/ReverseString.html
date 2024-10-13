@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String</title>
+</head>
+<body>
+    <script>
+        function reverseString(str){
+            let split = str.trim().split(' ').reverse().join(' ');
+            return split;
+        }
+        console.log(reverseString("Welcome to Bridgeon"));
+        console.log(reverseString("   hello world   "));
+        console.log(reverseString("a good       example"));
+        
+
+        
+        
+    </script>
+</body>
+</html>
